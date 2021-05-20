@@ -1,0 +1,17 @@
+[{
+        "id": "12",
+        "name": "poule",
+        "description": "la loutre de t mort",
+        "img_src": "img/product1.jpg",
+        "unit_price": "19.99 ", 
+        "available " : "false" 
+},
+{
+    "id": "14",
+    "name": "Peluche Loutre",
+    "description": "desc2tmort",
+    "img_src": "img/product2.jpg",
+    "unit_price": "19.99 ", 
+    "available " : "false" 
+}
+]

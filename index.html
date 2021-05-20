@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Favoris</li>
+                <li>Mon compte</li>
+                <li>Panier</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Séléction de produit</h1>
+        <section id="filter">
+            <label>Trier par:</label>
+            <select name="filter" id="filter">
+                <option value="news">Nouveautés</option>
+                <option value="popular">Les plus populaire</option>
+                <option value="lowest_price">Prix: croissant</option>
+                <option value="highest_price">Prix: décroissant</option>
+                <option value="nameaz">Nom: A-Z</option>
+                <option value="nameza">Nom: Z-A</option>
+            </select>
+        </section>
+        <section id="products">
+            <div><img src="img/product1.jpg"></div>
+            <div><img src="img/product2.jpg"></div>
+            <div><img src="img/product3.jpg"></div>
+            <div><img src="img/product4.jpg"></div>
+            <div><img src="img/product5.jpg"></div>
+            <div><img src="img/product6.jpg"></div>
+        </section>
+        <span id="test"></span>
+        <img id="img" src="" alt="">
+        <section>
+            <script>
+                let array = []
+                let src = []
+                fetch("info.json")
+                .then(res => res.json())
+                .then(data => {
+                    data.forEach(element => {
+                        array.push(element)
+                        console.log(array)
+                        document.getElementById("test").innerHTML = array[0]
+                    });
+                })
+            </script>
+        </section>
+    </main>
+    <footer>Ici le footer</footer>
+</body>
+</html>
