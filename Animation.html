@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jour 27</title>
+	<style>
+		/* 
+		 *	DEMO 1
+		 */
+		#demo1 div {
+			animation-name: animation_div;
+			animation-duration: 5s;
+			animation-iteration-count: 4;
+			animation-direction: alternate;
+			animation-fill-mode: forwards; /* L'état final de l'animation est maintenu */
+			animation-play-state: paused;
+		}
+
+		#demo1 div:hover {
+			animation-play-state: running;
+		}
+
+		@keyframes animation_div {
+			/* from { */
+			0% {
+				margin-left: 0;
+				width: 400px;
+				font-size: 20px;
+				background-color: blue;
+			}
+			20% {
+				width: 500px;
+			}
+			40% {
+				width: 200px;
+			}
+			80% {
+				margin-left: 0;
+			}
+			/* to { */
+			100% {
+				margin-left: 200px;
+				width: 300px;
+				font-size: 25px;
+				background-color: red;
+			}
+		}
+
+		/* 
+		 *	DEMO 2
+		 */
+		#demo2 div:first-child {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+		#demo2 div:first-child:hover {
+			transform: translate( 50px, -80px );
+		}
+		#demo2 div:nth-child( 2 ) {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		#demo2 div:nth-child( 2 ):hover {
+			transform: scale( 1.2, 2 );
+		}
+		#demo2 div:nth-child( 3 ) {
+			width: 200px;
+			height: 200px;
+			background-color: salmon;
+			transition: transform 2s;
+		}
+		#demo2 div:nth-child( 3 ):hover {
+			transform: rotate( 90deg );
+		}
+		#demo2 div:nth-child( 4 ) {
+			width: 200px;
+			height: 200px;
+			background-color: lime;
+			transition: transform 2s;
+		}
+		#demo2 div:nth-child( 4 ):hover {
+			transform: skewY( 30deg );
+		}
+	</style>
+</head>
+<body>
+	<section id="demo1">
+		<div>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat molestiae debitis, eius minima dolor officia, consequuntur, reprehenderit iste dolorem iusto consequatur laudantium id adipisci repudiandae expedita omnis voluptas similique unde.</p>
+		</div>
+	</section>
+
+	<section id="demo2">
+		<div></div>
+		<div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat molestiae debitis, eius minima dolor officia, consequuntur, reprehenderit iste dolorem iusto consequatur laudantium id adipisci repudiandae expedita omnis voluptas similique unde.</p></div>
+		<div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat molestiae debitis, eius minima dolor officia, consequuntur, reprehenderit iste dolorem iusto consequatur laudantium id adipisci repudiandae expedita omnis voluptas similique unde.</p></div>
+		<div><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat molestiae debitis, eius minima dolor officia, consequuntur, reprehenderit iste dolorem iusto consequatur laudantium id adipisci repudiandae expedita omnis voluptas similique unde.</p></div>
+	</section>
+	
+</body>
+</html>
